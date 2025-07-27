@@ -2,27 +2,64 @@
 <html>
 <!-- ASÍ ES COMO SE COMENTA EL CÓDIGO EN HTML -->
     <head>
+        <!-- CONFIGURACIÓN DEL DOCUMENTO -->
+        <!-- Establece la codificación de caracteres para soportar acentos y caracteres especiales -->
+        <!-- UTF-8 permite mostrar: ñ, á, é, í, ó, ú, ü, ¿, ¡, €, ©, ®, emojis, caracteres chinos 中文, etc. -->
         <meta charset="UTF-8">
+        
+        <!-- VIEWPORT: Controla cómo se ve la página en dispositivos móviles -->
+        <!-- width=device-width: El ancho de la página = ancho de la pantalla del dispositivo -->
+        <!-- initial-scale=1.0: Zoom inicial al 100% (sin zoom automático) -->
+        <!-- shrink-to-fit=no: Evita que Safari en iOS reduzca el contenido automáticamente -->
+        <!-- Sin viewport, las páginas se ven muy pequeñas en móviles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        
+        <!-- Descripción que aparece en los resultados de Google -->
         <meta name="description" content="Bebida refrescante Cola Cola - La mejor bebida del mundo">
+        
+        <!-- Palabras clave para motores de búsqueda (SEO) -->
         <meta name="keywords" content="coca cola, bebida, refresco">
+        
+        <!-- Título que aparece en la pestaña del navegador -->
         <title>Bebida refrescante</title>
+        
+        <!-- Icono que aparece en la pestaña del navegador (favicon) -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        
+        <!-- CARGA DE FUENTES DE GOOGLE FONTS -->
+        <!-- Optimización para cargar fuentes más rápido -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Carga la fuente Roboto desde Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap" rel="stylesheet">  
+        
+        <!-- ARCHIVOS CSS -->
+        <!-- Normalize.css: resetea estilos por defecto del navegador -->
         <link rel="stylesheet" href="css/normalize.css">
+        <!-- Nuestro archivo de estilos personalizado -->
         <link rel="stylesheet" href="style.css">
+        
+        <!-- ICONOS DE FONT AWESOME -->
+        <!-- Biblioteca de iconos para redes sociales, botones, etc. -->
         <script src="https://kit.fontawesome.com/526903b81b.js" crossorigin="anonymous"></script>
 
     </head>
     <body>
+        <!-- ==================== ENCABEZADO (HEADER) ==================== -->
+        <!-- El header contiene el logo y el menú de navegación -->
         <header>
+            <!-- Container: centra el contenido y limita el ancho máximo -->
             <div class="container">
+                <!-- Logo: enlace que lleva al inicio -->
                 <a href="index.html">
+                    <!-- Imagen del logo con clase CSS para darle estilo -->
                     <img src="img/logo.svg" class="logo" alt="Logo">
                 </a>
+                
+                <!-- MENÚ DE NAVEGACIÓN -->
+                <!-- nav: etiqueta semántica para menús de navegación -->
                 <nav>
+                    <!-- Enlaces internos que van a las secciones de la página -->
                     <a href="#inicio">Inicio</a>
                     <a href="#nosotros">Nosotros</a>
                     <a href="#servicios">Servicios</a>
@@ -31,36 +68,59 @@
                 </nav>
             </div>
         </header>
+        <!-- ==================== CONTENIDO PRINCIPAL (MAIN) ==================== -->
+        <!-- main: contiene todo el contenido principal de la página -->
         <main>
+            <!-- ========== SECCIÓN INICIO ========== -->
+            <!-- Esta es la primera sección que ve el usuario -->
             <section id="inicio">
+                <!-- Imagen de fondo principal (banner) -->
                 <img src="img/bannerprincipal.jpg">
 
+                <!-- Bloque de texto sobre la imagen (posicionado con CSS) -->
                 <div class="bloque-inicio">
+                    <!-- Título principal de la página -->
                     <h1>Bienvenido a Cola Cola</h1>
+                    <!-- Descripción o subtítulo -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet ultrices tempus. Integer placerat leo lectus, at commodo lacus pulvinar ut. Aenean sed ante ornare, pellentesque tellus sed, commodo tortor.</p>                 
+                    <!-- Botón que lleva a la sección "nosotros" -->
                     <a href="#nosotros" class="boton boton-rojo">Ver más</a>
                 </div>
             </section>
+            <!-- ========== SECCIÓN NOSOTROS (ABOUT US) ========== -->
+            <!-- Información sobre la empresa -->
             <section id="nosotros">
                 <div class="container">
+                    <!-- Párrafo con información de la empresa -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet ultrices tempus. Integer placerat leo lectus, at commodo lacus pulvinar ut. Aenean sed ante ornare, pellentesque tellus sed, commodo tortor.                 
                     </p>
                 </div>
             </section>
+            <!-- ========== SECCIÓN SERVICIOS ========== -->
+            <!-- Muestra los diferentes servicios en tarjetas -->
             <section id="servicios">
+                <!-- row: contenedor para organizar columnas -->
                 <div class="row">
+                    <!-- TARJETA DE SERVICIO 1 -->
+                    <!-- columna-33: cada tarjeta ocupa 33% del ancho (3 columnas) -->
                     <div class="columna columna-33">
+                        <!-- Contenedor de cada servicio -->
                         <div class="bloque-servicio">
+                            <!-- Contenedor de la imagen del servicio -->
                             <div class="bloque-img-servicio">
                                 <img src="img/servicio1.jpg" alt="Servicio 1">
                             </div>
+                            <!-- Contenedor del texto del servicio -->
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 1</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet ultrices tempus. Integer placerat leo lectus, at commodo lacus pulvinar ut. Aenean sed ante ornare, pellentesque tellus sed, commodo tortor.</p>
+                                <!-- Botón para ver más información -->
                                 <a href="#" class="boton">Ver más</a>
                             </div>
                         </div>
                      </div>
+                    
+                    <!-- TARJETA DE SERVICIO 2 -->
                     <div class="columna columna-33">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
@@ -73,6 +133,8 @@
                             </div>
                         </div>
                      </div>
+                    
+                    <!-- TARJETA DE SERVICIO 3 -->
                     <div class="columna columna-33">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
@@ -88,39 +150,54 @@
                     </div>
 
             </section>
+            <!-- ========== SECCIÓN GALERÍA ========== -->
+            <!-- Muestra imágenes en una cuadrícula -->
             <section id="galeria">
+                <!-- container-fluid: ocupa todo el ancho de la pantalla -->
                 <div class="container-fluid">
                     <div class="row">
+                        <!-- IMAGEN 1 DE LA GALERÍA -->
                         <div class="columna columna-33">
+                            <!-- cuadrado-perfecto: hace que la imagen sea cuadrada -->
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio1.jpg">
                                 <h4>imagen1</h4>
                             </div>
                         </div>
+                        
+                        <!-- IMAGEN 2 DE LA GALERÍA -->
                         <div class="columna columna-33">
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio2.jpg">
                                 <h4>imagen2</h4>
                             </div>
                         </div>
+                        
+                        <!-- IMAGEN 3 DE LA GALERÍA -->
                         <div class="columna columna-33">
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio3.jpg">
                                 <h4>imagen3</h4>
                             </div>
                         </div>
+                        
+                        <!-- IMAGEN 4 DE LA GALERÍA -->
                         <div class="columna columna-33">
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio4.jpg">
                                 <h4>imagen4</h4>
                             </div>
                         </div>
+                        
+                        <!-- IMAGEN 5 DE LA GALERÍA -->
                         <div class="columna columna-33">
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio5.jpg">
                                 <h4>imagen5</h4>
                             </div>
                         </div>
+                        
+                        <!-- IMAGEN 6 DE LA GALERÍA -->
                         <div class="columna columna-33">
                             <div class="cuadrado-perfecto">
                                 <img src="img/servicio6.jpg">
@@ -131,49 +208,78 @@
 
                 </div>
             </section>
+            <!-- ========== SECCIÓN CONTACTO ========== -->
+            <!-- Formulario de contacto y mapa -->
             <section id="contactenos">
                 <div class="container">
                     <div class="row">
+                        <!-- FORMULARIO DE CONTACTO -->
+                        <!-- columna-50: ocupa 50% del ancho -->
                         <div class="columna columna-50">
+                            <!-- Formulario que envía datos por POST -->
                             <form action="#" method="post">
+                                <!-- CAMPO NOMBRE -->
                                 <div class="form-block">
+                                    <!-- Input de texto para el nombre -->
                                     <input type="text" name="nombre" class="form-control">
                                 </div>
+                                
+                                <!-- CAMPO EMAIL -->
                                 <div class="form-block">
+                                    <!-- Input de email (valida formato de email) -->
                                     <input type="email" name="email" class="form-control">
                                 </div>
+                                
+                                <!-- CAMPO MENSAJE -->
                                 <div class="form-block">
+                                    <!-- Textarea para mensajes largos -->
                                     <textarea name="mensaje"></textarea>
                                 </div>
+                                
+                                <!-- BOTÓN ENVIAR -->
                                 <div class="form-block">
+                                    <!-- Botón que envía el formulario -->
                                     <input type="submit" value="enviar">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
+                
+                <!-- MAPA DE GOOGLE MAPS EMBEBIDO -->
+                <!-- iframe: incrusta contenido de otra página web -->
                 <iframe width="520" height="400" frameborder="0" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20santiago+(chile)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </section>
         </main>
+        <!-- ==================== PIE DE PÁGINA (FOOTER) ==================== -->
+        <!-- footer: contiene información adicional y enlaces secundarios -->
         <footer>
             <div class="container">
                 <div class="row">
+                    <!-- COLUMNA 1: LOGO Y DESCRIPCIÓN -->
+                    <!-- columna-25: cada columna ocupa 25% del ancho (4 columnas) -->
                     <div class="columna columna-25">   
+                        <!-- Logo del footer (versión blanca) -->
                         <img src="img/logo-blanco.png" class="logo-footer">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet ultrices tempus. Integer placerat leo lectus, at commodo lacus pulvinar ut. Aenean sed ante ornare, pellentesque tellus sed, commodo tortor.
                         </p>
                     </div>
+                    
+                    <!-- COLUMNA 2: ENLACES RELACIONADOS -->
                     <div class="columna columna-25">
                         <h3>
                             Temas Relacionados
                         </h3>
+                        <!-- Lista no ordenada de enlaces -->
                         <ul>
                             <li><a href="#">Tema 1</a></li>
                             <li><a href="#">Tema 2</a></li>
                             <li><a href="#">Tema 3</a></li>
                         </ul>
                     </div>
+                    
+                    <!-- COLUMNA 3: INFORMACIÓN DE CONTACTO -->
                     <div class="columna columna-25">
                         <h3>
                             Datos de Contacto
@@ -181,14 +287,18 @@
                         <ul>
                             <li>xxxx@mail.com</li>
                             <li>+569 </li>
+                            <!-- br: salto de línea -->
                             <li> xxxx <br> xxxx </li>
                         </ul>                        
                     </div>
+                    
+                    <!-- COLUMNA 4: REDES SOCIALES -->
                     <div class="columna columna-25">
                         <h3>
                             Redes Sociales
                         </h3>
                         <ul>
+                            <!-- Enlaces a redes sociales (sin Font Awesome por ahora) -->
                             <li><a href="#"><i>Facebook</i></a></li>
                             <li><a href="#"><i>Twitter</i></a></li>
                             <li><a href="#"><i>Instagram</i></a></li>
@@ -196,7 +306,11 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- BARRA DE COPYRIGHT -->
+            <!-- Información de derechos de autor -->
             <div class="barra-footer">
+                <!-- &copy; es el símbolo de copyright © -->
                 &copy; Todos los derechos reservados, 2025
             </div>
         </footer>

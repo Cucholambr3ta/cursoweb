@@ -1,95 +1,131 @@
+/* ==================== ESTILOS GLOBALES ==================== */
+
+/* RESET UNIVERSAL: Aplica box-sizing a todos los elementos */
+/* box-sizing: border-box hace que el padding y border se incluyan en el ancho total */
 *{
     box-sizing: border-box;
 }
 
+/* ESTILOS DEL BODY (todo el documento) */
 body
 {
-    font-family: Roboto;
-    font-size: 13px;
+    font-family: Roboto; /* Fuente principal del sitio */
+    font-size: 13px;     /* Tamaño de texto base */
 }
+
+/* ESTILOS PARA TODOS LOS ENLACES */
 a
 {
-    display: inline-block;
+    display: inline-block; /* Permite aplicar padding y margin a los enlaces */
 }
+
+/* ESTILOS PARA TODOS LOS PÁRRAFOS */
 p
 {
-    color:black;
+    color: black; /* Color del texto */
 }
 
+/* ==================== HEADER (ENCABEZADO) ==================== */
+
+/* Estilos del header principal */
 header
 {
-    padding: 15px 0;
-    position:fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: white;
-    width: 100%;
+    padding: 15px 0;        /* Espaciado interno arriba y abajo */
+    position: fixed;        /* Se mantiene fijo al hacer scroll */
+    top: 0;                 /* Pegado a la parte superior */
+    left: 0;                /* Pegado a la izquierda */
+    z-index: 2;             /* Aparece por encima de otros elementos */
+    background-color: white; /* Fondo blanco */
+    width: 100%;            /* Ocupa todo el ancho */
 }
+
+/* Contenedor del header (organiza logo y navegación) */
 header .container
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;              /* Flexbox para organizar elementos */
+    justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
+    align-items: center;        /* Centra verticalmente */
 }
+
+/* Estilos del logo en el header */
 header .container .logo
 {
-    width: 100px;
+    width: 100px; /* Ancho fijo del logo */
 }
+
+/* Estilos de los enlaces del header */
 header .container a
 {
-    text-decoration: none;
-    color: red;
-    margin: 0 15px;
+    text-decoration: none; /* Quita el subrayado */
+    color: red;           /* Color rojo */
+    margin: 0 15px;       /* Separación entre enlaces */
 }
 
+/* ==================== BOTONES ==================== */
+
+/* Estilo base para todos los botones */
 .boton
 {
-    text-align: center;
-    text-decoration:none;
-    padding: 15px 20px;
+    text-align: center;      /* Texto centrado */
+    text-decoration: none;   /* Sin subrayado */
+    padding: 15px 20px;      /* Espaciado interno */
 }
 
-
+/* Botón rojo especial */
 .boton.boton-rojo
 {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-.container{
-    width: 1140px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: red;   /* Fondo rojo */
+    color: white;           /* Texto blanco */
+    font-size: 20px;        /* Texto más grande */
+    font-weight: bold;      /* Texto en negrita */
 }
 
+/* ==================== CONTAINERS (CONTENEDORES) ==================== */
+
+/* Contenedor principal que centra el contenido */
+.container{
+    width: 1140px;       /* Ancho máximo */
+    margin: 0 auto;      /* Centrado horizontalmente */
+    padding-left: 15px;  /* Espaciado interno izquierdo */
+    padding-right: 15px; /* Espaciado interno derecho */
+}
+
+/* ==================== SECCIÓN INICIO ==================== */
+
+/* Contenedor de la sección inicio */
 #inicio
 {
-    position: relative;
+    position: relative; /* Permite posicionar elementos dentro de forma absoluta */
 }
+
+/* Imagen principal de la sección inicio */
 #inicio img
 {
-    width: 100%;
-    display: block;
+    width: 100%;     /* Ocupa todo el ancho disponible */
+    display: block;  /* Elimina espacios debajo de la imagen */
 }
+
+/* Bloque de texto sobre la imagen */
 #inicio .bloque-inicio
 {
-    position: absolute;
-    top:  40%;
-    left: 50%;
-    width: 400px;
-    text-align: center;
-    margin-left: -200px;
+    position: absolute;  /* Se posiciona sobre la imagen */
+    top: 40%;           /* A 40% desde arriba */
+    left: 50%;          /* A 50% desde la izquierda */
+    width: 400px;       /* Ancho fijo */
+    text-align: center; /* Texto centrado */
+    margin-left: -200px; /* Centra el bloque (la mitad del ancho) */
 }
+
+/* Título principal sobre la imagen */
 #inicio .bloque-inicio h1
 {
-    color: white;
-    font-size: 35px;
+    color: white;    /* Texto blanco para contrastar */
+    font-size: 35px; /* Tamaño grande */
 }
+
+/* Párrafo sobre la imagen */
 #inicio .bloque-inicio p
 {
-    color: white;
-    font-size: 16px;
+    color: white;    /* Texto blanco */
+    font-size: 16px; /* Tamaño mediano */
 }
